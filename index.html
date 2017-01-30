@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Toucher</title>
+</head>
+
+<body>
+	
+<header>
+	<div class="wrap">
+    	<nav>
+                <ul class="menu">
+                    <li><a href="#">Главная</a></li><span id="marker-hed">&bull;</span>
+                    <li><a href="#">О компании</a></li><span id="marker-hed">&bull;</span>
+                    <li><a href="#">Товары для новорожденных</a></li><span id="marker-hed">&bull;</span>
+                    <li><a href="#">Качество</a></li><span id="marker-hed">&bull;</span>
+                    <li><a href="#">Преимущество</a></li><span id="marker-hed">&bull;</span>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+        </nav>
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo"></p>
+            </div>
+            <h2>Душевная забота в каждом прикосновении</h2>
+            <div class="call-back">
+                <p><span id="phone-top">+7 913 637 79 23</span></p>
+                <p><a href="#">Заказать звонок</a></p>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="header-banner">
+    <div class="header-banner-border">
+        <div class="header-banner-description">
+            <h1>Производство и продажа товаров<br>
+                для новорожденных оптом
+            </h1>
+            <p>Конверты на выписку, наборы в кроватку, крестильные комплекты</p>
+        </div>
+    </div>
+</section>
+<section class="medals">
+    <ul class="medals-list">
+        <li><img src="images/medal-ico-1.png" alt="medal-ico-1">
+            <span class="medals-title">cвыше</span>
+            <span class="medals-price timer" id="lollipop" data-to="100" data-speed="1500">100</span>
+            <p class="medals-description">магазинов детскойодежды работаютс нами</p>
+        </li>
+        <li><img src="images/medal-ico-2.png" alt="medal-ico-1">
+            <span class="medals-title">наценка</span>
+            <span class="medals-price timer" id="lollipop" data-to="200" data-speed="1500">200</span><span class="medals-price" id="span-proc">%</span>
+            <p class="medals-description">позволит вам зарабатывать больше</p>
+        </li>
+        <li><img src="images/medal-ico-3.png" alt="medal-ico-1">
+            <span class="medals-title">более</span>
+            <span class="medals-price timer" id="lollipop" data-to="1500" data-speed="1500">1500</span>
+            <p class="medals-description">сотрудников работают для вас</p>
+        </li>
+        <li><img src="images/medal-ico-4.png" alt="medal-ico-1">
+            <span class="medals-title">более</span>
+            <span class="medals-price timer" id="lollipop" data-to="1000" data-speed="1500">1000</span>
+            <p class="medals-description">единиц товара отшивают на нашей фабрике каждый день</p>
+        </li>
+        <li><img src="images/medal-ico-5.png" alt="medal-ico-1">
+            <span class="medals-title">более</span>
+            <span class="medals-price timer" id="lollipop" data-to="10" data-speed="1500">10</span>
+            <p class="medals-description">лет успешной работы</p>
+        </li>
+    </ul>
+</section>
+<section class="form">
+    <div class="wrap-form">
+        <div class="form-arrow">
+            <img src="images/wrap-form-book.png" alt="book">
+            <h2>Закажите Каталог</h2>
+            <p id="p-desk">с оптовыми ценами прямо <br>сейчас и получите <span>скидку 10%</span><br>от суммы первого заказа</p>
+            <div class="timer-wrap">
+                <p id="timer-wrap-p">до конца осталось:</p>
+                <div id="countdown"></div>
+                <ul class="count-timer">
+                    <li>дней</span>
+                    <li>часов</span>
+                    <li>минут</span>
+                    <li>секунд</span>
+
+                </ul>
+        </div>
+        </div>
+
+            <form action="" class="form-form">
+                <h3>Оставьте заявку</h3>
+                <p>на получение полного<br> каталога наших товаров</p>
+                <input class="input-form" id="name-input-form" type="text" name="name" placeholder="Ваше имя:" required>
+                <input class="input-form" id="email-input-form" type="email" name="email"  placeholder="Ваш E-mail:" required>
+                <input class="input-form" id="phone-input-form" type="tel" name="phone" placeholder="Ваш телефон:" required pattern="[0-9]{5,11}">
+                <input class="input-cat-btn" type="submit" name="btn-cat" value="Получить каталог">
+            </form>
+    </div>
+</section>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.countTo.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+@font-face {
+    font-family: "NeoSansPro-Regular"; /* Имя шрифта */
+    src: url(fonts/NeoSansPro-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: "NeoSansPro-Medium"; /* Имя шрифта */
+    src: url(fonts/NeoSansPro-Medium.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: "NeoSansPro-Light"; /* Имя шрифта */
+    src: url(fonts/NeoSansPro-Light.ttf); /* Путь к файлу со шрифтом */
+   }
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	/*font-family: 'Roboto', sans-serif; font-family: 'Roboto Condensed', sans-serif;*/
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+header{
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+}
+.wrap{
+	margin: 0 auto;
+    padding: 0 10px;
+}
+	nav{
+		height: 40px;
+	    text-align: center;
+	    background: url(images/bg-menu.png) no-repeat;
+	    background-size: 100% 100%;
+	    padding: 0 10px;
+	    font-family:'NeoSansPro-Regular';
+    	z-index: 10;
+    	position: relative;
+	}
+		.menu{
+
+		}
+			.menu li {
+		        position: relative;
+    			display: inline-block;
+    			font-size: 17px;
+   				padding: 0 5px;
+   				margin-top:3px; 
+			}
+			.menu li a{
+				text-decoration: none;
+				color: #544737;
+			}
+			#marker-hed{
+				color: #6f8ca3;
+			}
+	.header{
+		position: relative;
+		height: 134px;
+	    margin: -10px 0 0 16%;
+	    background: url(images/header-bg.png) no-repeat;
+	    background-size: 80% 100%;
+	    font-family:'NeoSansPro-Regular';
+	}
+		.logo{
+			float: left;
+			margin: 35px 0 0 82px;
+			
+		}
+		.header h2{
+			margin: 47px 0 0 28px;
+    		font-size: 23px;
+			float: left;
+			font-family: 'NeoSansPro-Regular';
+			color: #544737;
+		}
+		.call-back{
+			float: left;
+			display: inline-block;
+			margin: 35px 0 0 32px;
+		}
+			.call-back p{
+				margin-bottom: 8px;
+			}
+			.call-back a{
+				background: url(images/btn-phone1.png) no-repeat;
+			    background-size: 100% 100%;
+			    z-index: 999;
+			    text-decoration: none;
+			    color: #fff;
+			    font-family: "NeoSansPro-Light";
+			    padding: 4px 22px 7px 20px;
+			    margin-left: 13px; 
+
+			}
+			.call-back a:hover{
+				background: url(images/btn-phone1-hover.png) no-repeat;
+			    background-size: 100% 100%;
+			}
+			#phone-top{
+				color: #000;
+				font-family: "NeoSansPro-Medium";
+				font-size: 20px;
+			}
+
+.header-banner{
+	position: relative;
+	height: 638px;
+	background: url(images/header-banner-bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+	.header-banner-description{
+		padding: 20px 0px 21px 0px;
+	    background-color: rgba(93,75,62,0.8);
+	    border-radius: 15px;
+	    text-align: center;
+	    position: relative;
+		margin:5px;
+	}
+	.header-banner-border{
+		border: 2px dashed #fff;
+	    border-radius: 15px;
+	    top: 335px;
+	    width: 49%;
+	    margin: 0 auto;
+	    position: relative;
+	}
+	.header-banner-description h1{
+		font-family: "NeoSansPro-Medium";
+	    color: #fff;
+	    line-height: 0.95;
+	    font-size: 45px;
+	}
+	.header-banner-description p{
+		font-family: "NeoSansPro-Light";
+	    color: #fff;
+	    font-size: 24px;
+	    margin-top: 9px;
+	}
+
+.medals{
+    background: #fffbf1;
+    height: 340px;
+    margin-top: -60px;
+}
+	.medals-list{
+		width: 1000px;
+	   	margin: 0 auto;
+	   	list-style: none;
+	   	padding-top: 78px;
+	   
+	}
+		.medals-list li{
+			height: 153px;
+			width: 151px;
+			background: url(images/medal-bg.png) no-repeat;
+			background-size: 100% 100%;
+			float: left;
+			margin-left: 40px;
+		}
+			.medals-list li img{
+				    margin: 22px 0px 0px 54px;
+				    width: 44px;
+				    height: 36px;
+			}
+		.medals-title{
+			font-family: "NeoSansPro-Light";
+		    color: #544737;
+		    font-size: 19px;
+		    text-align: center;
+		    display: block;
+		    padding-top: 3px;
+		}
+		.medals-price{
+			font-family: "NeoSansPro-Medium";
+			color: #544737;
+	    	font-size: 26px;
+	    	text-align: center;
+		    display: block;
+
+		}
+		.medals-description{
+			font-family: "NeoSansPro-Light";
+		    color: #544737;
+		    font-size: 18px;
+		    text-align: center;
+		    padding-top: 40px;
+		}
+		#span-proc{
+		float: right;
+    	margin: -32px 28px 0 0px;
+
+		}
+.form{
+	height: 472px;
+	background: url(images/form-bg.png) repeat-y;
+	/*background-size: 100% 100%;*/
+}
+	.wrap-form{
+		height: 247px;
+		width: 666px;
+		background: url(images/wrap-form-bg.png) no-repeat;
+		top: 95px;
+	    position: relative;
+	    margin: 0 auto;
+	    background-size: contain;
+	}
+
+	.form-arrow{
+		position: relative;
+    	right: 100px;
+	}
+				.timer-wrap{
+				    background: #fdf3ed;
+				    border-radius: 14px;
+				    width: 298px;
+				    height: 100px;
+				    margin: 44px 0 0 250px;
+			}	
+				#timer-wrap-p{
+					color: #1d1d1d;
+					font-family: "NeoSansPro-Light";
+					font-size: 19px;
+   					padding: 7px 72px 8px 0px;
+				}
+					.count-timer{
+						width: inherit;
+    					margin: -8px 0px 0 29px;
+					}
+					.count-timer li{
+						float: left;
+						list-style: none;
+						font-family: 'NeoSansPro-Regular';
+					    color: #1d1d1d;
+					    font-size: 14px;
+					    padding: 0px 31px 0 0;
+					}
+		.form-arrow img{
+			position: relative;
+		    top: 5px;
+		    float: left;
+		}
+		.form-arrow h2{
+			font-family: 'NeoSansPro-Regular';
+		    color: #fff;
+		    font-size: 42px;
+		    display: inline-block;
+		    padding: 32px 0px 0px 10px;
+		    right: 90px;
+		    left: 91px;
+		    text-transform: uppercase;
+		}
+		.form-arrow p{
+			font-family: "NeoSansPro-Light";
+		    color: #fff;
+		    font-size: 21px;
+		    padding: 0px 112px 0px 0;
+		    text-align: right;
+		}
+		.form-arrow span{
+			font-family: 'NeoSansPro-Regular';
+		}
+			
+			
+			.form-form{
+			margin: -360px 0px 10px 509px;
+		    height: 400px;
+		    width: 286px;
+		    background: url(images/form-form-bg.png) no-repeat;
+			}
+				.form-form h3{
+					font-family: "NeoSansPro-Medium";
+					color: #fff;
+					font-size: 24px;
+					text-align: center;
+					padding: 56px 0 0px 0;
+				}
+				.form-form p{
+					font-family: 'NeoSansPro-Regular';
+					color: #fff;
+					font-size: 17px;
+					text-align: center;
+				}
+				.input-form{
+					width: 80%;
+				    height: 40px;
+				    color: #000;
+				    font-family: "NeoSansPro-Light";
+				        margin: 6px 0 10px 30px;
+				    border-radius: 7px;
+				    font-size: 15px;
+				    border: 1px solid #fff;
+				    box-sizing: border-box;
+				    
+					
+				}
+				#name-input-form{
+					background:#fff url(images/name-ico.png) no-repeat;
+					background-size: 14px 14px;
+					background-position: 10px;
+    				padding-left: 33px;
+    				margin-top: 13px;
+				}
+				#email-input-form{
+					background:#fff url(images/email-ico.png) no-repeat;
+					background-size: 14px 14px;
+					background-position: 10px;
+    				padding-left: 33px;
+				}
+				#phone-input-form{
+					background:#fff url(images/phone-ico.png) no-repeat;
+					background-size: 14px 14px;
+					background-position: 10px;
+    				padding-left: 33px;
+				}
+				.input-cat-btn{
+					height: 48px;
+				    background: url(images/btn-form.png) no-repeat;
+				    background-size: 100% 100%;
+				    border: none;
+				    width: 80%;
+				    color: #000;
+				    font-size: 18px;
+				    padding: 0 0 8px 0;
+				    font-family: 'NeoSansPro-Regular';
+       				margin: 0 0 10px 30px;
+				}
+				.input-cat-btn:hover{
+					background: url(images/btn-form-hover.png) no-repeat;
+				    background-size: 100% 100%;
+				    cursor: pointer;
+				 }
+				 .go-up, .go-down {
+ display: none;
+ position: fixed; /*позиционирование*/
+ z-index: 9999; /*поверх все элементов на странице*/
+ right: 15%; /*положение на странице, если слева - left*/
+ background: #4F4F4F;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ cursor: pointer;
+ color: #fff;
+ text-align: center;
+ font: normal normal 42px/42px sans-serif;
+ text-shadow: 0 1px 2px #000;
+ opacity: .5;
+ padding: 3px;
+ margin-bottom: 5px;
+ width: 42px;
+ height: 42px;
+}
+.go-up { bottom: 60px; }
+.go-down { bottom: 10px; }
+.go-down:hover,
+.go-up:hover {
+ opacity: 1;
+ box-shadow: 0 5px 0.5em -1px #666;
+}
+@media (min-width: 0px) and (max-width: 780px) {
+	.header h2{
+		display: none;
+	}
+	.call-back {
+    margin: 31px 0 0 -65px!important;
+	}
+}
+@media (min-width: 200px) and (max-width: 950px) {
+	.medals {
+    height: 845px;
+	}
+	.header {
+    margin: -10px 0 0 21%;
+    background-size: 74% 100%;
+	}
+	.medals-list {
+    width: 206px;
+	}
+	nav{
+		display: none;
+	}
+	.form-form {
+    margin: 26px 0px 10px 154px;
+	}
+	.form {
+    height: 640px;
+    background: url(images/form-bg.png) repeat-y;
+   	background-size: cover;
+	}
+	.wrap-form {
+    background:  none!important;
+    }
+    .form-arrow img {
+    display: none;
+	}
+	#p-desk {
+		display: none!important;
+	}	
+	.form-arrow h2 {
+    display: none;
+    }
+	.header-banner {
+    height: 350px;
+	}
+   .logo img{
+   	width: 50%;
+   }
+   .logo{
+   	margin: 38px 0 0 39px;
+   }
+   .header h2{
+   	    margin: 43px 0 0 -53px;
+   	    font-size: 13px;
+   }
+   #phone-top {
+    font-size: 12px;
+	}
+	.call-back a {
+	    font-size: 9px;
+	    margin: 0 0 8px -8px;
+	}
+	.call-back {
+	    margin: 60px 0 0 -198px;
+	}
+	.header-banner-description h1 {
+	    font-size: 18px;
+	}
+	.header-banner-description p {
+	    margin-top: 9px;
+	    font-size: 15px;
+	}
+	.header-banner-border {
+	    top: 151px;;
+	}
+	.medals-list li {
+	    margin-top: 98px;
+	}
+	.medals-list li:first-child {
+	    margin-top: 0;
+	}
+	.medals {
+	    height: 1309px;
+	}
+}
+			
+@media (min-width: 950px) and (max-width: 1150px) {
+  .header h2{
+    font-size: 14px;
+    margin: 43px 7px 0 -52px;
+  }
+  #phone-top {
+    font-size: 14px;
+  }
+  .call-back a {
+    font-size: 9px;
+    margin: 0 0 8px -8px;
+  }
+  .call-back p{
+        margin: 0px 0 0 -25px;
+  }
+  .logo img{
+    
+    width: 60%;
+  }
+  .menu li{
+    font-size: 15px;
+  }
+  .medals {
+    height: 940px;
+    margin-top: -150px;
+	}
+  .medals-list {
+    width: 50%;
+    }
+    .medals-list li {
+    height: 146px;
+    width: 152px;
+    margin: 110px 16px 0 59px;
+    }
+     .medals-list li:last-child{
+     	margin: 122px 0px 0px 175px;
+     }
+    .medals-price {
+    font-size: 20px;
+    }
+    #span-proc {
+    margin: -24px 32px 0 0px;
+    }
+    .medals-description {
+    font-size: 17px;}
+    .header-banner-description h1 {
+    font-size: 23px;
+}
+.header-banner-description p {
+    font-size: 16px;
+}
+.header-banner {
+    height: 440px;
+}
+  .header-banner-border {
+    top: 243px;
+}
+}
+@media (min-width: 1150px) and (max-width: 1330px){
+  .header h2{
+    font-size: 17px;
+        margin: 47px 7px 0 -27px;
+  }
+  #phone-top {
+    font-size: 13px;
+  }
+  .call-back a {
+    font-size: 10px;
+    margin:0 0 8px 0;
+  }
+  .call-back p{
+    margin: 2px 0 0 -28px;
+  }
+  .logo img{
+    
+    width: 70%;
+  }
+  .menu li{
+    font-size: 15px;
+  }
+  .medals-list {
+    width: 889px;
+    }
+    .medals-list li {
+    height: 137px;
+    width: 136px;
+    }
+    .medals-price {
+    font-size: 20px;
+    }
+    #span-proc {
+    margin: -24px 32px 0 0px;
+    }
+    .medals-description {
+    font-size: 17px;}
+    .header-banner-description h1 {
+    font-size: 27px;
+}
+.header-banner-description p {
+    font-size: 17px;
+}
+.header-banner {
+    height: 523px;
+}
+  .header-banner-border {
+    top: 285px;
+}
+}
+@media (min-width: 1330px) and (max-width: 1560px){
+   .header h2{
+  	font-size: 20px;
+  	margin: 47px 9px 0 5px;
+  }
+  #phone-top {
+  	font-size: 15px;
+  }
+  .call-back a {
+  	font-size: 13px;
+   	margin:0 0 8px 0;
+  }
+  .call-back p{
+  	margin: 2px 0 0 -28px;
+  }
+  .logo img{
+  	
+  	width: 90%;
+  }
+  .header-banner-description h1 {
+   font-size:2em;
+	}
+	.header-banner-description p {
+    font-size: 22px;
+	}
+}
+@media (max-width: 1560px) {
+ 
+}
+
+@media (min-width: 1600px) {
+  
+}
